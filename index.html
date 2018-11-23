@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3CW2</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="img/ironman.png" type="favicon/ico" />
+    <script type="text/javascript" src="date_time.js"></script>
+    
+	
+</head>
+<body>   
+    <!-- navbar -->
+            <nav class="navbar navbar-expand-md navbar-dark bg-faded">
+              <a class="navbar-brand" href="index.html"><img src="img/moon_brand.png" height="50" width="50" class="d-inline-block align-top img-brand"><br><span class="title-brand">"3CW2"</span></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerhide" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerhide">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="member.html">Member</a>
+                    </li>                  
+                </ul>
+                    <form autocomplete="off">
+                        <div class="autocomplete" style="width:230px;">
+                            <input id="search" type="text" name="myCountry" placeholder="Name Search">
+                        </div>
+                        <input name="Button" id="btn btn-outline-light" data-toggle="modal" data-target="#myModal" type="button" value="search" onClick="call_data()">
+                    </form>
+                </div>
+            </nav>
+            
+    <div class="container">
+            <div class="rounded text-center">
+                <img src="img/icons_Astronaut.png" class="img-fluid">
+            </div>
+            <div class="row">
+                <div class="col-md-3">                    
+                </div>
+                <div class="col-md-6 text-center">
+                    <h1 class="title-main">Our Memory Never Change</h1>
+                </div>
+                <div class="col-md-3">                    
+                </div>
+            </div>            
+            <div class="text-center">                
+                    <a href="https://drive.google.com/open?id=14_rUX1by9BVHcpzZcf043qxrGTYnQfvF"><button class="btn btn-outline-light my-2 my-sm-0" id="btn-load" type="button">Download</button></a>
+            </div>
+    </div>
+    <br>
+    <!-- date and time -->
+    <!-- time -->
+    <div class="container">
+        <div class="text-center">
+            <span class="txt-time" id="time-hou"></span>
+            <span class="dot-time">:</span>
+            <span class="txt-time" id="time-min"></span>
+            <span class="dot-time">:</span>
+            <span class="txt-time" id="time-sec"></span>
+            <br>
+            <span class="txt-time-title" id="">H</span>
+            <span class="space-time-title"></span>
+            <span class="txt-time-title" id="">M</span>
+            <span class="space-time-title"></span>
+            <span class="txt-time-title" id="">S</span>
+        </div>
+    </div>
+    <br><br>
+<!-- date -->
+<div class="container">
+    <div class="text-center">
+        <span class="date" id="day-title"></span>
+        <span class="comma">,</span>
+        <span class="date" id="month-title"></span>
+        <span class="comma">,</span>
+        <span class="date" id="date-title"></span>
+        <span class="comma">,</span>
+        
+        <span class="date" id="years-title"></span>
+    </div>
+</div>
+<!-- modals -->
+    <div class="container">
+      <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Member Info</h4>
+          </div>
+          <div class="modal-body text-center">
+              <!-- picture -->
+            <span id="modals_span1"></span>
+            <!-- name -->
+            <span id="modals_span2"></span><br>
+            <!-- age -->
+            Age: <span id="modals_age"></span>&nbsp;years old <br>
+            <!-- facebook -->
+            Facebook: <span id="modals_fb"></span><br>
+            ສາຍາ: <span id="modals_saya"></span><br>
+            <i>"</i><span id="modals_caption"></span><i>"</i>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>        
+      </div>
+    </div>    
+  </div>
+<script type="text/javascript">window.onload = date_time('date_time');</script>
+<script src="autocomplete.js"></script>
+<script src="data.js"></script>   
+</body>
+</html>
